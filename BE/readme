@@ -1,0 +1,68 @@
+1. install node js  
+2. npm init 
+3. install express => npm i express
+4. install nodemon => npm i --save-dev nodemon
+5. add start => "start":"nodemoon server.js"
+6. create MVC folder (models, cotroller, view, middlewares,database,public,router)
+7. create link database MongoDB
+8. create router, div router 
+9. create controller
+10.create middlewares => tao xử lý thông qua next trước khi qua controller
+11. security
+12. enviroment variable => .env
+13. save section => id + active
+14. moongoo
+15. socket
+16. mail
+17.
+/*library*/
+    { lib: shortid => create id random }
+        =>npm i shortid --s => shorid.generate()
+    {cookie-parser}
+        =>npm i cookie-parser
+    {security md5}
+        => npm i md5 => require('md5') => md5(string)
+    {dotenv}
+        => npm i dotenv --s
+    {multer =. upfile img}
+        => npm i multer --s
+        => var upload = multer ({dest : './public/uploads/'})
+        => use middlewares => upload.single('params')
+/*end library*/
+
+/*note*/
+    {get params link}
+        =>  app.get('link/:id',(req, res) =>{}) => get params id => req.params
+    {send render web server side}
+        => res.render(web)
+/**/ end node
+
+/*epress tool*/
+    {Router}
+        => router = epress.Router() 
+        => module.exports = router
+        => app.router('link', useRouterDiv)
+    {get static file Public}
+        => app.use(express.static('public'))
+    {get req.body}
+        =>npm i body-parser
+    {signcookie}
+        => npm install cookie-parser 
+        => app.use(cookieParser('klaiwipoqjnco29dhnn'));
+        => res.cookie(key,value,{ signed:true })
+/*end epress tool*/
+
+/* install project*/
+    1. npm i
+    2. create file '.env'
+    3. copy data drop .env  
+        data=>
+                SECSION_SECRET=dadada564564wegqweq6
+                MONGODB_URL=mongodb://localhost:27017/foodz  
+    4. seting mongodb => create database foodz
+    5. create file '.gitignore'
+    6. drop data to .gitignore
+        data=>
+            node_modules
+            .env
+/*end */
