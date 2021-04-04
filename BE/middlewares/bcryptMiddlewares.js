@@ -8,8 +8,7 @@ class Bcrypt {
                     res.locals.userHash= hash
                     next()
                 });
-            });
-            
+            });        
         } catch (err) {
             res.error(err);
         }
