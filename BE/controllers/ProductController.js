@@ -1,3 +1,4 @@
+const notiResData = require('../class/notiResData');
 const Product = require('../models/ProductModel');
 
 class ProductController {
@@ -14,7 +15,15 @@ class ProductController {
 
     }
     postProduct = async (req, res) =>{
-
+        let product = Product
+        product = req.body
+        console.log(product);
+        try {
+            await Product.create(product);
+            notiResData.customResNoti(req,res,200);
+        } catch (error) {
+            notiResData.customResNoti(req,res,200,error);
+        }
     }
     updateProduct = async (req,res) =>{
 

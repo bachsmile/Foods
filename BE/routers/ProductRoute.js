@@ -2,5 +2,6 @@ const express = require('express');
 const ProductController = require('../controllers/ProductController');
 const router = express.Router();
 const verify= require('./../middlewares/authTokenMiddlewares');
-router.use('/', ProductController.getAllProduct);
+router.use('/get', ProductController.getAllProduct);
+router.use('/post', ProductController.postProduct);
 module.exports = router;
